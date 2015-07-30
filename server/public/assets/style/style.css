@@ -1,0 +1,13 @@
+.jumbotron {
+    padding: 15px;
+}
+
+.project-form {
+    margin-bottom: 30px;
+}
+
+#getStaffBtn {
+    position: relative;
+    float: right;
+    margin: 25px;
+}

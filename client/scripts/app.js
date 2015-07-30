@@ -3,17 +3,23 @@
  */
 $(document).ready(function() {
     $("#genProjectBtn").on('click', function() {
-       var proj = ClientProject();
+        //Create a project with our inputted name and a random company name
+        var projectName = $("#projectNameField").val();
+        var proj = ClientProject(
+           COMPANY_NAMES[getRandomNum(0, COMPANY_NAMES.length-1)]);
         $('.project-wrapper').html(proj);
     });
 });
+
+//Constants
+var COMPANY_NAMES = ["Prime Steakhouse", "Prime Emporium", "Prime Laundromat", "Prime Slosh 'n Wash", "Prime Real Estate", "Prime Ice Cream Shoppe"];
 
 /**
  * Creates a new client project and randomly assigns
  * it's project requirements to itself
  * @constructor
  */
-function ClientProject(name, companyName) {
+function ClientProject(name) {
     this.name = name;
     this.companyName = companyName;
 
@@ -26,6 +32,11 @@ function ClientProject(name, companyName) {
 function buildProjectElements(clientProject) {
     var $projectDiv = $('<div/>', {
 
+    });
+
+    var $panelHead = $("<div/>", {
+        class: "panel-heading",
+        text: clientProject.name
     });
 
     return $projectDiv;

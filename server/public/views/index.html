@@ -7,19 +7,71 @@
     <link rel="stylesheet" href="../assets/style/style.css"/>
 </head>
 <body>
-    <div class="jumbotron col-md-8 col-md-offset-1">
-        <h1>It twerks!</h1>
-    </div>
-    <button id="genProjectBtn" type="button" class="btn btn-default col-md-4">Generate Project</button>
 
-    <div class="project-container">
-        <div class="project-wrapper">
+<!-- Jumbotron Header -->
+<div class="jumbotron col-md-10 col-md-offset-1 text-center">
+    <h1>Project Management Suite</h1>
+</div>
 
+<div class="container">
+    <!-- Project Generation Form -->
+    <div class="row">
+        <div class="project-form col-lg-6 col-lg-offset-3">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button id="projectGenBtn" class="btn btn-default" type="button">Create!</button>
+              </span>
+                <input id="projectNameField" type="text" class="form-control" placeholder="Enter project name...">
+            </div>
         </div>
     </div>
-    <!-- BEGIN SCRIPTS -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/scripts/app.min.js"></script>
-    <!-- END SCRIPTS -->
+
+    <!-- Project Container -->
+    <div class="project-container">
+        <div class="project-wrapper panel panel-primary">
+            <div class="panel-heading">
+                <h1>Some Title</h1>
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <button id="getStaffBtn" class="btn btn-primary" type="button">Get Staff!</button>
+                </div>
+                <div class="row">
+                    <div class="well employee-container col-md-6 col-md-offset-1">
+                        <div class="employee-card">
+                            <div class="employee-card panel panel-default">
+                                <h4>Front End Developer</h4>
+                                <p>10 units p/h</p>
+                            </div>
+                        </div>
+                        <div class="employee-card">
+                            <div class="employee-card panel panel-default">
+                                <h4>Client Side Developer</h4>
+                                <p>10 units p/h</p>
+                            </div>
+                        </div>
+                        <div class="employee-card">
+                            <div class="employee-card panel panel-default">
+                                <h4>Server Side Developer</h4>
+                                <p>10 units p/h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well project-info-container col-md-3 col-md-offset-1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- BEGIN SCRIPTS -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<script src="../assets/scripts/app.min.js"></script>
+<!-- END SCRIPTS -->
 </body>
 </html>
