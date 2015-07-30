@@ -5,9 +5,9 @@ $(document).ready(function() {
     $("#genProjectBtn").on('click', function() {
         //Create a project with our inputted name and a random company name
         var projectName = $("#projectNameField").val();
-        var proj = ClientProject(
-           COMPANY_NAMES[getRandomNum(0, COMPANY_NAMES.length-1)]);
-        $('.project-wrapper').html(proj);
+        var companyName = COMPANY_NAMES[getRandomNum(0, COMPANY_NAMES.length-1)];
+        var proj = ClientProject(projectName, companyName);
+        $('.project-wrapper').html(buildProjectElements(proj));
     });
 });
 
