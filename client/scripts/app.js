@@ -11,6 +11,22 @@ $(document).ready(function() {
     });
 
     //Button - Get Staff - Ajax
+    $("body").on('click', '#getStaffBtn', function() {
+        var employeeList = ["FrontEnd", "ClientSide", "ServerSide"];
+        var employeeListJSON = JSON.stringify(employeeList);
+        console.log(employeeListJSON);
+        $.ajax({
+            type: "GET",
+            url: "/employee-request",
+            data: employeeListJSON,
+            success: function(response) {
+                console.log(response);
+            },
+            error: function() {
+                console.log("Whaaaat");
+            }
+        });
+    });
 });
 
 //Constants

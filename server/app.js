@@ -11,12 +11,11 @@ app.set('port', (process.env.PORT || 5000));
 
 //Routing
 app.get("/employee-request", function(req, res) {
-    //Create employee
-    var employee = employeeFactory("FrontEnd");
+    console.log(req);
 });
 
 app.get('/*', function(req, res) {
-    var file = req.params[0] || "/views/index.html";
+    var file = req.params[0] || "./views/index.html";
     res.sendFile(path.join(__dirname, "./public", file));
 });
 
