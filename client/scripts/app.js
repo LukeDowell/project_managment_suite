@@ -6,9 +6,11 @@ $(document).ready(function() {
         //Create a project with our inputted name and a random company name
         var projectName = $("#projectNameField").val();
         var companyName = COMPANY_NAMES[getRandomNum(0, COMPANY_NAMES.length-1)];
-        var proj = ClientProject(projectName, companyName);
+        var proj = new ClientProject(projectName, companyName);
         $('.project-wrapper').html(buildProjectElements(proj));
     });
+
+    //Button - Get Staff - Ajax
 });
 
 //Constants

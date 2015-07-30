@@ -12,6 +12,7 @@ app.set('port', (process.env.PORT || 5000));
 //Routing
 app.get("/employee-request", function(req, res) {
     //Create employee
+    var employee = employeeFactory("FrontEnd");
 });
 
 app.get('/*', function(req, res) {
