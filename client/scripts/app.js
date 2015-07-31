@@ -30,9 +30,14 @@ $(document).ready(function() {
 
                 var $sprintReq = $("<h2/>", {text: "Sprints Needed: " + calculateSprintsRequired()});
                 $(".project-info-container").append($sprintReq);
-            }
 
-        })
+            }
+        });
+
+
+        $(this).hide();
+        $(this).parent().append($("#employeeRequestBtn").fadeIn(1000));
+
     });
 });
 
