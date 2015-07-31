@@ -4,7 +4,6 @@
 var nameGen = require('./randomname');
 var unitGen = require('./random');
 
-
 /**
  * Creates a new employee and returns it
  * @param skill

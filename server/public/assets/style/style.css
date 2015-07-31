@@ -11,3 +11,9 @@
     float: right;
     margin: 25px;
 }
+
+.employee-card {
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 15px;
+}
